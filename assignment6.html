@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .slideanimate {
+            visibility: hidden;
+        }
+
+        .slide {
+            visibility: visible;
+        }
+    </style>
+    <title>天竺鼠車車!</title>
+  
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+    
+</head>
+
+<body>
+    <!-- https://animate.style/ -->
+
+    <div id="outer" style="width:100vw;height: 4700px">
+        <img src="https://res.cloudinary.com/dvmvzmng3/image/upload/v1640696017/%E5%A4%A9%E7%AB%BA%E9%BC%A0%E8%BB%8A%E8%BB%8A_0006_%E8%A5%BF%E7%BE%85%E6%91%A9_xplcju.png"
+            class="img-fluid slideanimate" data-pos=300 data-direction="fadeInDown" style="position:fixed;top:0px;">
+        <img src="https://res.cloudinary.com/dvmvzmng3/image/upload/v1640696017/%E5%A4%A9%E7%AB%BA%E9%BC%A0%E8%BB%8A%E8%BB%8A_0003_%E7%81%AB%E5%B1%B1%E9%BC%A0_g8jkfr.png"
+            class="img-fluid slideanimate" data-pos=700 data-direction="fadeInDown" style="position:fixed;top:0px;">
+        <img src="https://res.cloudinary.com/dvmvzmng3/image/upload/v1640696017/%E5%A4%A9%E7%AB%BA%E9%BC%A0%E8%BB%8A%E8%BB%8A_0005_%E6%95%91%E8%AD%B7%E8%BB%8A_jggngq.png"
+            class="img-fluid slideanimate" data-pos=1100 data-direction="fadeInDown" style="position:fixed;top:0px;">
+        <img src="https://res.cloudinary.com/dvmvzmng3/image/upload/v1640696017/%E5%A4%A9%E7%AB%BA%E9%BC%A0%E8%BB%8A%E8%BB%8A_0004_%E5%92%96%E5%95%A1%E9%BC%A0_vlqc19.png"
+            class="img-fluid slideanimate" data-pos=1500 data-direction="fadeInDown"
+            style="position:fixed;left:-100px;top:0px;">
+        <img src="https://res.cloudinary.com/dvmvzmng3/image/upload/v1640696017/%E5%A4%A9%E7%AB%BA%E9%BC%A0%E8%BB%8A%E8%BB%8A_0002_%E4%B8%BB%E8%A7%92_ctum0o.png"
+            class="img-fluid slideanimate" data-pos=1900 data-direction="fadeInDown" style="position:fixed;top:0px;">
+        <img src="https://res.cloudinary.com/dvmvzmng3/image/upload/v1640696018/%E5%A4%A9%E7%AB%BA%E9%BC%A0%E8%BB%8A%E8%BB%8A_0007_%E8%B7%91%E9%81%93_dk7vdi.png"
+            class="img-fluid slideanimate" data-pos=2300 data-direction="fadeIn"
+            style="position:fixed;top:20px;z-index: -2;">
+        <img src="https://res.cloudinary.com/dvmvzmng3/image/upload/v1640696017/%E5%A4%A9%E7%AB%BA%E9%BC%A0%E8%BB%8A%E8%BB%8A_0000_GOAL_ikt9vd.png"
+            class="img-fluid slideanimate" data-pos=2700 data-direction="fadeIn"
+            style="position:fixed;top:0px;width:100vw;z-index: 999;">
+        <img src="https://res.cloudinary.com/dvmvzmng3/image/upload/v1640696017/%E5%A4%A9%E7%AB%BA%E9%BC%A0%E8%BB%8A%E8%BB%8A_0001_%E7%8D%8E%E7%89%8C_c7yhmg.png"
+            class="img-fluid slideanimate" data-pos=3100 data-direction="fadeInDown" style="position:fixed;top:0px;">
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            var winh = $(window).height();
+            $(window).scroll(function () {
+                var scrolled = $(window).scrollTop();
+                $(".slideanimate").each(function () {
+                    if (scrolled > $(this).data("pos")) {
+                        $(this).addClass(
+                            "animate__animated slide animate__" + $(this).data("direction")
+                        );
+                    }
+                    if (scrolled == 0) {
+                        $(this).removeClass(
+                            "animate__animated slide animate__" + $(this).data("direction")
+                        );
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
